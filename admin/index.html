@@ -157,7 +157,7 @@ figure.shot figcaption{font-size:13px;color:var(--muted);line-height:1.5}
   <ol id="toclist">
     <li><a href="#plan"><span>교육 시간표</span><span class="t">00:00</span></a></li>
     <li><a href="#m0"><span>0. 관리자 기본 설정</span><span class="t">00:00</span></a></li>
-    <li><a href="#m1"><span>1. 모니터링 대시보드</span><span class="t">00:25</span></a></li>
+    <li><a href="#m1"><span>1. 이용 현황 모니터링</span><span class="t">00:25</span></a></li>
     <li><a href="#m2"><span>2. 부서·팀별 이용 통계</span><span class="t">00:40</span></a></li>
     <li><a href="#m3"><span>3. 크레딧·비용 모니터링</span><span class="t">00:50</span></a></li>
     <li><a href="#m4"><span>4. Antigravity·Agent 구축</span><span class="t">01:00</span></a></li>
@@ -171,11 +171,11 @@ figure.shot figcaption{font-size:13px;color:var(--muted);line-height:1.5}
 <header class="hero">
   <div class="eyebrow">법무법인(유) 세종 · Gemini Enterprise 관리자 교육</div>
   <h1>세종 GE 관리자 과정</h1>
-  <p class="lead">Gemini Enterprise 관리자 기본 설정(구독·라이선스·ID·앱 설정·데이터 연결·에이전트 승인)을 먼저 익힌 뒤, 모니터링 대시보드로 이용 현황을 읽고, 지원부서·변호사 팀별 통계를 뽑고, 추가 비용이 생기는 지점을 지키는 방법을 다룹니다. 이어서 Antigravity로 에이전트를 만들어 Gemini Enterprise에 올리는 흐름과, ChatGPT Enterprise 파일럿에서 만든 Agent를 옮길 때 생기는 오류를 진단합니다.</p>
+  <p class="lead">Gemini Enterprise 관리자 기본 설정(구독·라이선스·ID·앱 설정·데이터 연결·에이전트 승인)을 먼저 익힌 뒤, 사용자 관리·로그로 이용 현황을 확인하고, 지원부서·변호사 팀별 통계를 뽑고, 추가 비용이 생기는 지점을 지키는 방법을 다룹니다. 이어서 Antigravity로 에이전트를 만들어 Gemini Enterprise에 올리는 흐름과, ChatGPT Enterprise 파일럿에서 만든 Agent를 옮길 때 생기는 오류를 진단합니다.</p>
   <div class="meta"><span><b>시간</b> 90분 (설명 + 콘솔 실습)</span><span><b>대상</b> IT·운영 관리자</span><span><b>기준일</b> 2026-10-13, Google Cloud 공식 문서 · 화면: MZS 관리자 총괄 가이드</span></div>
   <details class="mtoc"><summary>목차</summary>
     <ol>
-      <li><a href="#plan">교육 시간표</a></li><li><a href="#m0">0. 관리자 기본 설정</a></li><li><a href="#m1">1. 모니터링 대시보드</a></li><li><a href="#m2">2. 부서·팀별 이용 통계</a></li><li><a href="#m3">3. 크레딧·비용 모니터링</a></li><li><a href="#m4">4. Antigravity·Agent 구축</a></li><li><a href="#m5">5. ChatGPT Agent 이전 진단</a></li><li><a href="#m6">6. 운영 필수 체크리스트</a></li><li><a href="#ref">부록 · 권한 · 출처</a></li>
+      <li><a href="#plan">교육 시간표</a></li><li><a href="#m0">0. 관리자 기본 설정</a></li><li><a href="#m1">1. 이용 현황 모니터링</a></li><li><a href="#m2">2. 부서·팀별 이용 통계</a></li><li><a href="#m3">3. 크레딧·비용 모니터링</a></li><li><a href="#m4">4. Antigravity·Agent 구축</a></li><li><a href="#m5">5. ChatGPT Agent 이전 진단</a></li><li><a href="#m6">6. 운영 필수 체크리스트</a></li><li><a href="#ref">부록 · 권한 · 출처</a></li>
     </ol>
   </details>
 </header>
@@ -187,7 +187,7 @@ figure.shot figcaption{font-size:13px;color:var(--muted);line-height:1.5}
     <thead><tr><th class="num">시작</th><th>모듈</th><th class="num">분</th><th>실습</th><th>요청 항목</th></tr></thead>
     <tbody>
       <tr><td class="num">00:00</td><td>0. 관리자 기본: Gemini Enterprise 관리자 설정</td><td class="num">25</td><td>실습 0</td><td>추가 요청</td></tr>
-      <tr><td class="num">00:25</td><td>1. 모니터링 대시보드 기능과 조회 방법</td><td class="num">15</td><td>실습 A</td><td>요청 1-①</td></tr>
+      <tr><td class="num">00:25</td><td>1. 이용 현황 모니터링 기능과 조회 방법</td><td class="num">15</td><td>실습 A</td><td>요청 1-①</td></tr>
       <tr><td class="num">00:40</td><td>2. 지원부서·변호사 팀별 이용 통계</td><td class="num">10</td><td>실습 B</td><td>요청 1-②</td></tr>
       <tr><td class="num">00:50</td><td>3. 크레딧이 발생하는 항목과 모니터링</td><td class="num">10</td><td>실습 C</td><td>요청 1-③</td></tr>
       <tr><td class="num">01:00</td><td>4. Antigravity와 Agent 구축</td><td class="num">12</td><td>시연</td><td>요청 2-①</td></tr>
@@ -210,7 +210,7 @@ figure.shot figcaption{font-size:13px;color:var(--muted);line-height:1.5}
       <rect x="28" y="52" width="250" height="220" rx="8" class="svg-acc"/>
       <text x="44" y="78" class="svg-h">Gemini Enterprise 콘솔</text>
       <text x="44" y="104" class="svg-t">· 앱 설정 · 기능 토글</text>
-      <text x="44" y="128" class="svg-t">· Analytics (모니터링)</text>
+      <text x="44" y="128" class="svg-t">· 보안 · 관측 가능성</text>
       <text x="44" y="152" class="svg-t">· Manage users (라이선스)</text>
       <text x="44" y="176" class="svg-t">· Usage &amp; Spending (크레딧)</text>
       <text x="44" y="200" class="svg-t">· Data stores (커넥터)</text>
@@ -405,61 +405,56 @@ figure.shot figcaption{font-size:13px;color:var(--muted);line-height:1.5}
 
 <!-- ============ M1 ============ -->
 <section class="mod" id="m1">
-  <div class="modhead"><span class="no">01</span><h2>모니터링 대시보드 기능과 조회 방법</h2><span class="dur">15분 · 00:25</span></div>
-  <p class="goal">"누가, 얼마나, 무엇을 쓰는가"는 네 화면에서 나옵니다. 화면마다 답하는 질문이 다릅니다.</p>
+  <div class="modhead"><span class="no">01</span><h2>이용 현황 모니터링 기능과 조회 방법</h2><span class="dur">15분 · 00:25</span></div>
+  <p class="goal">"누가, 얼마나, 무엇을 쓰는가"는 아래 화면에서 확인합니다. 화면마다 답하는 질문이 다릅니다.</p>
 
   <div class="tbl"><table>
     <thead><tr><th>화면</th><th>경로</th><th>답하는 질문</th></tr></thead>
     <tbody>
-      <tr><td><b>Analytics</b></td><td><span class="path">Gemini Enterprise › 앱 선택 › Analytics</span></td><td>전사 활성 사용자, 사용량, 에이전트·Notebook 이용, 만족도</td></tr>
-      <tr><td><b>Manage users</b></td><td><span class="path">Gemini Enterprise › Manage users › Export all users</span></td><td>라이선스 보유자 명단과 마지막 로그인 시각 (사용자 단위)</td></tr>
-      <tr><td><b>Usage &amp; Spending</b></td><td><span class="path">Gemini Enterprise › Usage &amp; Spending</span></td><td>할당량을 얼마나 썼는가, 추가 요금은 얼마인가 (3장)</td></tr>
-      <tr><td><b>Logs Explorer</b></td><td><span class="path">Logging › Logs Explorer</span></td><td>사용자별·기능별 상세 활동 기록 (설정 필요, 2장)</td></tr>
+      <tr><td><b>사용자 관리</b></td><td><span class="path">Gemini Enterprise › 사용자 관리</span></td><td>라이선스 보유자, 할당일, <b>최종 사용일</b> (사용자 단위), 인덱스 사용량</td></tr>
+      <tr><td><b>로그 탐색기</b></td><td><span class="path">Logging › 로그 탐색기</span></td><td>누가 어떤 기능(검색·어시스턴트·에이전트)을 언제 썼는가 (관측 설정 필요)</td></tr>
+      <tr><td><b>보안 › 통계</b></td><td><span class="path">앱 › 보안</span></td><td>Model Armor가 검사·탐지·차단한 상호작용</td></tr>
+      <tr><td><b>에이전트 추적</b></td><td><span class="path">Agent Platform › Agents › Deployments</span></td><td>배포한 커스텀 에이전트의 요청 수, 지연, 오류 (4장)</td></tr>
+      <tr><td><b>사용량 및 지출</b></td><td><span class="path">Gemini Enterprise › Usage &amp; Spending</span></td><td>할당량 사용률, 추가 비용 (3장)</td></tr>
     </tbody>
   </table></div>
 
-  <h3>Analytics 탭 5개</h3>
-  <div class="tbl"><table>
-    <thead><tr><th>탭</th><th>주요 지표</th><th>활용</th></tr></thead>
-    <tbody>
-      <tr><td><b>Adoption</b><br>도입</td><td>전체 사용자, 일·주·월 활성 사용자(DAU/WAU/MAU), 7일·28일 유지율, 성장·이탈, <b>구매 좌석 대비 사용 좌석</b></td><td>월간 보고의 첫 줄. 좌석 활용률로 라이선스 재배치 판단</td></tr>
-      <tr><td><b>Usage and quality</b><br>사용량·품질</td><td>검색·답변·액션 수, 검색 클릭률, 좋아요/싫어요 수와 싫어요 사유, 검색·답변 성공률</td><td>싫어요 사유가 몰리는 영역 = 교육·데이터 보강 대상</td></tr>
-      <tr><td><b>Agent</b><br>에이전트</td><td>월 에이전트 사용자, 에이전트 대화 세션, 사용된 에이전트 수, 생성된 에이전트 수 / Gemini Notebook 일·월 활성 사용자, 생성·공유 노트북, 오디오 개요 수</td><td>사내 에이전트 확산도. Notebook 지표는 앱이 아니라 <b>프로젝트 전체</b> 기준</td></tr>
-      <tr><td><b>Value</b> <span class="pill p-info">Preview</span></td><td>절약 시간, 절약 가치, 연간 추정치</td><td><b>직원 시간당 단가</b>를 입력해야 계산됨. 경영 보고용</td></tr>
-      <tr><td><b>User Level</b></td><td>사용자 ID별 총 메시지 수, Google 제공 에이전트 메시지 수, 자체 에이전트 메시지 수</td><td>부서·팀 통계의 원천 (2장). <b>Google 계정 팀의 허용(allowlist)이 있어야 보임</b></td></tr>
-    </tbody>
-  </table></div>
+  <h3>사용자 관리: 누가 쓰고 있나</h3>
+  <ul>
+    <li><span class="path">사용자 관리 › 멀티 리전 선택</span>: 구독별 총 라이선스와 할당 수, 사용자별 할당 날짜와 <b>최종 사용</b>(마지막 접속일)</li>
+    <li><b>좌석 활용률</b> = 기간 안에 접속한 라이선스 보유자 ÷ 구매 라이선스. 오래 접속하지 않은 사용자는 라이선스 재배치 대상입니다.</li>
+    <li><b>모든 사용자 내보내기</b>로 CSV를 받으면 엑셀에서 기간별 활성 인원과 2장의 부서·팀별 통계를 낼 수 있습니다.</li>
+  </ul>
+  <div class="shots g1"><figure class="shot"><img src="slides-img/g62.webp" alt="사용자 관리: 인덱스 할당량·사용량, 구독별 라이선스, 사용자별 할당일·최종 사용" loading="lazy"><figcaption>사용자 관리: 인덱스 할당량·사용량, 구독별 라이선스, 사용자별 할당일·최종 사용</figcaption></figure></div>
+  <p class="src">출처: <a href="https://docs.cloud.google.com/gemini/enterprise/docs/licenses" target="_blank" rel="noopener">Manage licenses</a></p>
 
-<div class="shots g1"><figure class="shot"><img src="slides-img/g86.webp" alt="앱 › 분석: Adoption 탭, 기간·활동 간격·제품 유형 필터" loading="lazy"><figcaption>앱 › 분석: Adoption 탭, 기간·활동 간격·제품 유형 필터</figcaption></figure></div>
-  <h3>조회 방법과 읽을 때 주의할 점</h3>
-  <ol>
-    <li>탭을 고른 뒤 날짜 범위를 정하고 필터를 설정한 다음 <b>Refresh</b>를 누릅니다. 월 단위 지표는 달력 월 기준입니다.</li>
-    <li>데이터는 <b>약 6시간마다</b> 갱신됩니다. 오늘 오전 사용량이 바로 보이지 않는 것은 정상입니다.</li>
-    <li>지표는 앱에 <b>데이터 스토어를 연결한 시점부터</b> 쌓입니다. 데이터 스토어 연결을 해제하면 일부 지표가 사라질 수 있으니 해제 전에 내보내 두십시오.</li>
-    <li>검색 분석은 global 앱에서 정식 기능이고, US·EU 멀티 리전 앱에서는 Preview입니다.</li>
-    <li>보관·재가공이 필요하면 <code>analytics:exportMetrics</code> API로 BigQuery에 내보냅니다. 최근 30일분, 프로젝트당 하루 5회, 조직당 하루 25회까지 가능합니다.</li>
-  </ol>
-  <p class="src">출처: <a href="https://docs.cloud.google.com/gemini/enterprise/docs/view-analytics" target="_blank" rel="noopener">View analytics</a></p>
-
-  <h3>관측 설정 (Observability)</h3>
-  <p>사용자별 상세 기록을 남기려면 관측 설정을 켭니다. 토글은 두 개이고, 법무법인에서는 둘을 따로 판단해야 합니다.</p>
+  <h3>관측 설정 (Observability): 상세 기록 남기기</h3>
+  <p>기능별·사용자별 상세 기록은 관측 설정을 켜야 쌓입니다. 켠 시점부터 기록되고 이전 기록은 없으므로 <b>교육 전에 미리 켜 두는 것</b>을 권장합니다. 토글은 두 개이고, 법무법인에서는 둘을 따로 판단해야 합니다.</p>
   <div class="grid2">
-    <div class="card"><h4>OpenTelemetry 추적·로그</h4><p>요청 흐름, 지연, 오류, 사용자 활동 로그를 Cloud Logging·Trace에 남깁니다. 질문 본문은 <code>&lt;elided&gt;</code>로 가려집니다. <b>운영 모니터링용으로 켜는 것을 권장</b>합니다.</p></div>
+    <div class="card"><h4>OpenTelemetry 추적·로그</h4><p>요청 흐름, 지연, 오류, 사용자 활동 로그를 Cloud Logging·Trace에 남깁니다. 질문 본문은 <code>&lt;elided&gt;</code>로 가려집니다. <b>운영 모니터링용으로 켜는 것을 권장</b>합니다. 수집량만큼 로깅 비용이 생깁니다.</p></div>
     <div class="card"><h4>프롬프트 입력·응답 출력 로깅</h4><p>질문과 답변 원문이 로그에 저장됩니다. 의뢰인 정보가 포함될 수 있으므로 <b>보안·리스크 담당 승인 후</b> 켜고, 로그 열람 권한(비공개 로그 뷰어)을 최소 인원으로 제한하십시오.</p></div>
   </div>
-  <p>경로: <span class="path">Gemini Enterprise › 앱 › Configurations › Observability</span> (Workflow Builder·Deep Research 에이전트는 <span class="path">Agents › 에이전트 › Configuration</span>)</p>
-  <p class="src">출처: <a href="https://docs.cloud.google.com/gemini/enterprise/docs/manage-observability-settings" target="_blank" rel="noopener">Manage observability settings</a> · <a href="https://docs.cloud.google.com/gemini/enterprise/docs/set-up-usage-audit-logs" target="_blank" rel="noopener">Set up usage audit logs</a></p>
-<div class="shots g2"><figure class="shot"><img src="slides-img/g119.webp" alt="Logging › 로그 탐색기: GE 사용자 활동 로그 조회" loading="lazy"><figcaption>Logging › 로그 탐색기: GE 사용자 활동 로그 조회</figcaption></figure><figure class="shot"><img src="slides-img/g47.webp" alt="앱 › 보안 › 통계: Model Armor가 검사·탐지한 상호작용" loading="lazy"><figcaption>앱 › 보안 › 통계: Model Armor가 검사·탐지한 상호작용</figcaption></figure></div>
+  <p>경로: <span class="path">Gemini Enterprise › 앱 › 구성 › 관측 가능성</span> (Workflow Builder·Deep Research 에이전트는 <span class="path">에이전트 › 에이전트 › Configuration</span>)</p>
+  <p>관리자 설정 변경 기록(관리자 활동 로그)은 항상 남고, 검색·답변 호출 기록(<b>데이터 액세스 감사 로그</b>)은 기본 꺼짐입니다. <span class="path">IAM 및 관리자 › 감사 로그</span>에서 Discovery Engine API의 데이터 읽기·쓰기를 켭니다.</p>
+  <p class="src">출처: <a href="https://docs.cloud.google.com/gemini/enterprise/docs/manage-observability-settings" target="_blank" rel="noopener">Manage observability settings</a> · <a href="https://docs.cloud.google.com/gemini/enterprise/docs/set-up-usage-audit-logs" target="_blank" rel="noopener">Set up usage audit logs</a> · <a href="https://docs.cloud.google.com/gemini/enterprise/docs/audit-logging" target="_blank" rel="noopener">Audit logging</a></p>
 
+  <h3>로그 탐색기와 보안 통계</h3>
+  <div class="code"><div class="cap">로그 탐색기 쿼리: GE 사용자 활동 로그 (PROJECT_ID 교체)</div><pre><code>logName="projects/PROJECT_ID/logs/discoveryengine.googleapis.com%2Fgemini_enterprise_user_activity"</code></pre><button class="copy" type="button">복사</button></div>
+  <ul>
+    <li>로그 한 줄이 요청 한 번입니다. 사용자, 호출한 기능(검색 <code>SearchService.Search</code>, 어시스턴트 <code>AssistantService.StreamAssist</code> 등), 시각이 남습니다.</li>
+    <li>기간·사용자로 좁혀 보는 데 적합하고, 부서별 집계는 2장처럼 BigQuery로 보내서 합니다.</li>
+    <li><span class="path">앱 › 보안 › 통계</span>에서는 Model Armor가 검사한 상호작용 수와 탐지된 위반(민감 정보, 프롬프트 주입 등)을 기간별로 봅니다.</li>
+  </ul>
+  <div class="shots g2"><figure class="shot"><img src="slides-img/g119.webp" alt="Logging › 로그 탐색기: GE 사용자 활동 로그 조회" loading="lazy"><figcaption>Logging › 로그 탐색기: GE 사용자 활동 로그 조회</figcaption></figure><figure class="shot"><img src="slides-img/g47.webp" alt="앱 › 보안 › 통계: Model Armor가 검사·탐지한 상호작용" loading="lazy"><figcaption>앱 › 보안 › 통계: Model Armor가 검사·탐지한 상호작용</figcaption></figure></div>
 
   <div class="lab">
-    <div class="lt"><span>실습 A</span><strong>대시보드 읽기와 사용자 명단 내보내기</strong><span class="pill p-info">5분</span></div>
+    <div class="lt"><span>실습 A</span><strong>이용 현황 확인과 사용자 명단 내보내기</strong><span class="pill p-info">5분</span></div>
     <ol>
-      <li>Google Cloud 콘솔에서 Gemini Enterprise를 열고 세종 앱을 선택합니다.</li>
-      <li><b>Analytics › Adoption</b>에서 지난달 MAU와 <b>구매 좌석 / 사용 좌석</b>을 적습니다. 사용 좌석 ÷ 구매 좌석 = 좌석 활용률입니다.</li>
-      <li><b>Usage and quality</b>에서 싫어요 사유 상위 3개를 확인합니다.</li>
-      <li><b>Agent</b> 탭에서 이번 달 생성된 에이전트 수와 Notebook 활성 사용자를 확인합니다.</li>
-      <li><b>Manage users</b>에서 멀티 리전을 선택하고 <b>Export all users</b>로 CSV를 받습니다. 이 파일이 실습 B의 재료입니다.</li>
+      <li><b>사용자 관리</b>에서 멀티 리전을 선택하고 구독별 총 라이선스와 할당 수를 적습니다.</li>
+      <li>사용자 목록의 <b>최종 사용</b>을 보고 최근 30일 안에 접속하지 않은 사용자가 몇 명인지 확인합니다.</li>
+      <li><b>모든 사용자 내보내기</b>로 CSV를 받습니다. 실습 B의 재료입니다.</li>
+      <li><b>구성 › 관측 가능성</b>에서 추적·로그가 켜져 있는지 확인하고, 켜져 있다면 <b>로그 탐색기</b>에서 위 쿼리를 실행해 봅니다.</li>
+      <li><b>보안 › 통계</b>에서 최근 7일 탐지 건수를 확인합니다.</li>
     </ol>
     <p>CSV 열: <code>user_principal</code>, <code>license_config</code>, <code>assignment_time</code>, <code>last_login_time</code>(UTC), <code>license_assignment_state</code>(ASSIGNED / NO_LICENSE / BLOCKED)</p>
   </div>
@@ -468,13 +463,13 @@ figure.shot figcaption{font-size:13px;color:var(--muted);line-height:1.5}
 <!-- ============ M2 ============ -->
 <section class="mod" id="m2">
   <div class="modhead"><span class="no">02</span><h2>지원부서·변호사 팀별 이용 통계</h2><span class="dur">10분 · 00:40</span></div>
-  <div class="note crit"><b>먼저 알아야 할 사실</b>Analytics 대시보드에는 부서·팀(그룹, 조직 단위) 필터가 없습니다. 팀별 통계는 <b>사용자 단위 데이터</b>를 세종의 <b>조직 매핑표</b>(이메일 → 지원부서/변호사 팀)와 결합해서 만듭니다. Google 블로그도 "대화 로그를 인사·사업부 데이터와 결합해 부서별로 분석"하는 방식을 안내합니다.</div>
+  <div class="note crit"><b>먼저 알아야 할 사실</b>Gemini Enterprise 콘솔에는 부서·팀(그룹, 조직 단위)별 이용 통계 화면이 없습니다. 팀별 통계는 <b>사용자 단위 데이터</b>를 세종의 <b>조직 매핑표</b>(이메일 → 지원부서/변호사 팀)와 결합해서 만듭니다. Google 블로그도 "대화 로그를 인사·사업부 데이터와 결합해 부서별로 분석"하는 방식을 안내합니다.</div>
 
   <figure>
     <div class="svgbox"><svg viewBox="0 0 860 210" role="img" aria-label="부서별 통계 산출 흐름">
       <rect x="14" y="20" width="190" height="70" rx="8" class="svg-acc"/>
       <text x="30" y="48" class="svg-h">사용자 단위 데이터</text>
-      <text x="30" y="72" class="svg-s">CSV · User Level · 로그</text>
+      <text x="30" y="72" class="svg-s">사용자 CSV · 활동 로그</text>
       <rect x="14" y="120" width="190" height="70" rx="8" class="svg-gold"/>
       <text x="30" y="148" class="svg-h">조직 매핑표</text>
       <text x="30" y="172" class="svg-s">이메일 · 구분 · 부서/팀</text>
@@ -495,11 +490,11 @@ figure.shot figcaption{font-size:13px;color:var(--muted);line-height:1.5}
     <figcaption>그림 2. 어느 단계를 택하든 조직 매핑표는 하나로 관리합니다. 인사 시스템 또는 Entra ID 그룹에서 월 1회 갱신합니다.</figcaption>
   </figure>
 
-  <h3>세 가지 방법 (난이도 순)</h3>
-  <div class="grid3">
+  <h3>두 가지 방법 (난이도 순)</h3>
+  <div class="grid2">
     <div class="card"><div class="lv">1단계 · 바로 가능</div><h4>사용자 CSV + 엑셀</h4><p>Export all users의 <code>last_login_time</code>으로 기간 내 로그인한 사람을 활성으로 봅니다. 부서별 <b>라이선스 수·활성 인원·활성률</b>까지 산출됩니다. 사용량(메시지 수)은 없습니다.</p></div>
-    <div class="card"><div class="lv">2단계 · 허용 요청</div><h4>User Level 탭 + 매핑표</h4><p>사용자별 메시지 수, 자체 에이전트 메시지 수가 나옵니다. <b>1인당 사용량</b>과 <b>에이전트 활용도</b>를 팀별로 비교할 수 있습니다. Google 계정 팀에 허용 요청이 필요합니다.</p></div>
-    <div class="card"><div class="lv">3단계 · 상시 대시보드</div><h4>로그 → BigQuery → Looker Studio</h4><p>Log Router 싱크로 사용자 활동 로그를 BigQuery에 쌓고 매핑표와 JOIN합니다. 기능별(검색·어시스턴트·에이전트)·일자별 분석과 자동 갱신 대시보드가 가능합니다.</p></div>
+    
+    <div class="card"><div class="lv">2단계 · 상시 집계</div><h4>로그 → BigQuery → Data Studio(구 Looker Studio)</h4><p>Log Router 싱크로 사용자 활동 로그를 BigQuery에 쌓고 매핑표와 JOIN합니다. 기능별(검색·어시스턴트·에이전트)·일자별 분석과 자동 갱신 대시보드가 가능합니다.</p></div>
   </div>
 
   <h3>통계 정의를 먼저 정하십시오</h3>
@@ -507,11 +502,10 @@ figure.shot figcaption{font-size:13px;color:var(--muted);line-height:1.5}
     <thead><tr><th>지표</th><th>정의 (권장)</th><th>데이터</th></tr></thead>
     <tbody>
       <tr><td>라이선스 보유자</td><td><code>license_assignment_state = ASSIGNED</code></td><td>CSV</td></tr>
-      <tr><td>월 활성 사용자</td><td>해당 월에 로그인 1회 이상 (1단계) 또는 메시지 1건 이상 (2·3단계)</td><td>CSV / User Level / 로그</td></tr>
+      <tr><td>월 활성 사용자</td><td>해당 월에 접속 1회 이상 (1단계) 또는 요청 1건 이상 (2단계)</td><td>CSV / 활동 로그</td></tr>
       <tr><td>활성률</td><td>월 활성 사용자 ÷ 라이선스 보유자</td><td>계산</td></tr>
-      <tr><td>1인당 사용량</td><td>팀 총 메시지 ÷ 팀 활성 사용자</td><td>User Level / 로그</td></tr>
-      <tr><td>에이전트 활용도</td><td>자체 에이전트 메시지 ÷ 총 메시지</td><td>User Level</td></tr>
-    </tbody>
+      <tr><td>1인당 사용량</td><td>팀 총 요청 수 ÷ 팀 활성 사용자</td><td>활동 로그</td></tr>
+          </tbody>
   </table></div>
   <p>구분 열은 <b>지원부서</b>와 <b>변호사</b> 두 값으로 두고, 변호사는 소속 팀, 지원부서는 부서명을 넣으면 하나의 표에서 두 가지 통계를 모두 낼 수 있습니다. 5명 미만 팀은 개인이 식별되므로 상위 그룹으로 합쳐 보고하는 것을 권장합니다.</p>
 
@@ -531,7 +525,7 @@ H2  9월활성   =IF(AND(E2="ASSIGNED", D2&gt;=DATE(2026,9,1)), 1, 0)</code></pr
     <p class="src"><code>last_login_time</code>은 UTC입니다. 월 경계를 엄밀히 맞추려면 9시간을 더해 한국 시간으로 바꾼 뒤 비교하십시오.</p>
   </div>
 
-  <h3>3단계 구성: 로그를 BigQuery로</h3>
+  <h3>2단계 구성: 로그를 BigQuery로</h3>
   <ol>
     <li>관측 설정에서 OpenTelemetry 추적·로그를 켭니다 (1장).</li>
     <li><span class="path">Logging › Log Router › Create sink</span> → 대상 BigQuery 데이터 세트, 아래 포함 필터를 입력합니다.</li>
@@ -870,9 +864,9 @@ https://vertexaisearch.cloud.google.com/static/oauth/oauth.html</code></pre><but
   <div class="tbl"><table>
     <thead><tr><th>역할</th><th>ID</th><th>할 수 있는 일</th></tr></thead>
     <tbody>
-      <tr><td>Gemini Enterprise 관리자</td><td><code>roles/discoveryengine.agentspaceAdmin</code></td><td>앱 설정, Analytics, 라이선스, Usage &amp; Spending, 관측 설정, 에이전트 등록</td></tr>
+      <tr><td>Gemini Enterprise 관리자</td><td><code>roles/discoveryengine.agentspaceAdmin</code></td><td>앱 설정, 라이선스, Usage &amp; Spending, 관측 설정, 에이전트 등록</td></tr>
       <tr><td>Gemini Enterprise 사용자</td><td><code>roles/discoveryengine.agentspaceUser</code></td><td>웹 앱 사용</td></tr>
-      <tr><td>Discovery Engine 뷰어</td><td><code>roles/discoveryengine.viewer</code></td><td>분석 지표 내보내기 API 호출</td></tr>
+      
       <tr><td>로그 뷰어 / 비공개 로그 뷰어</td><td><code>roles/logging.viewer</code> / <code>roles/logging.privateLogViewer</code></td><td>활동 로그 / 프롬프트 원문 포함 로그 열람</td></tr>
       <tr><td>결제 계정 뷰어</td><td><code>roles/billing.viewer</code></td><td>Usage &amp; Spending Billing 탭, 결제 보고서</td></tr>
     </tbody>
@@ -880,7 +874,6 @@ https://vertexaisearch.cloud.google.com/static/oauth/oauth.html</code></pre><but
 
   <h3>공식 문서로 확인하지 못한 사항</h3>
   <ul>
-    <li><code>exportMetrics</code> 내보내기 테이블의 열 구성, User Level 데이터 포함 여부 <span class="tag-u">확인 필요</span></li>
     <li>활동 로그 BigQuery 테이블의 정확한 필드 경로 (예시 SQL은 블로그의 <code>useriamprincipal</code> 기준) <span class="tag-u">확인 필요</span></li>
     <li>퇴사자 데이터를 관리자가 일괄 삭제하는 절차 <span class="tag-u">확인 필요</span></li>
     <li>ACL 없이 올린 Cloud Storage·BigQuery 문서의 노출 범위 (의뢰인 자료 적재 전 테스트) <span class="tag-u">확인 필요</span></li>

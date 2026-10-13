@@ -149,7 +149,7 @@ a.read{color:#E2B35E;text-decoration:none;font-weight:600;white-space:nowrap}
 <thead><tr><th class="n">시작</th><th>장</th><th class="n">분</th><th>실습</th></tr></thead>
 <tbody>
 <tr><td class="n">00:00</td><td><b>0. 관리자 기본 설정</b> 구독·라이선스·ID·앱 구성·기능 관리·에이전트 승인</td><td class="n">25</td><td>실습 0</td></tr>
-<tr><td class="n">00:25</td><td><b>1. 모니터링 대시보드</b> Analytics 5개 탭, 관측 설정, 로그</td><td class="n">15</td><td>실습 A</td></tr>
+<tr><td class="n">00:25</td><td><b>1. 이용 현황 모니터링</b> 사용자 관리, 관측 설정, 로그, 보안 통계</td><td class="n">15</td><td>실습 A</td></tr>
 <tr><td class="n">00:40</td><td><b>2. 부서·팀별 이용 통계</b> 지원부서·변호사 팀별 산출</td><td class="n">10</td><td>실습 B</td></tr>
 <tr><td class="n">00:50</td><td><b>3. 크레딧·비용</b> 할당량, 인덱싱, 초과 사용, 예산 알림</td><td class="n">10</td><td>실습 C</td></tr>
 <tr><td class="n">01:00</td><td><b>4. Antigravity와 Agent 구축</b></td><td class="n">12</td><td>시연</td></tr>
@@ -169,7 +169,7 @@ a.read{color:#E2B35E;text-decoration:none;font-weight:600;white-space:nowrap}
 <div class="bd">
 <div class="cols c11">
  <div class="box acc"><h3>Google Cloud 콘솔</h3><p class="sm">console.cloud.google.com › Gemini Enterprise</p>
- <ul><li>앱, 데이터 스토어, 사용자 관리, 설정, 구독 관리</li><li>앱 안: 개요 · 연결된 데이터 스토어 · 프롬프트 칩 · <b>구성</b> · 에이전트 · 보안 · 통합 · 분석</li><li>IAM, 로그, 결제</li></ul><p class="role">역할: Gemini Enterprise 관리자</p></div>
+ <ul><li>앱, 데이터 스토어, 사용자 관리, 설정, 구독 관리</li><li>앱 안: 개요 · 연결된 데이터 스토어 · 프롬프트 칩 · <b>구성</b> · 에이전트 · 보안 · 통합</li><li>IAM, 로그, 결제</li></ul><p class="role">역할: Gemini Enterprise 관리자</p></div>
  <div class="box"><h3>Gemini Enterprise 웹 앱</h3><p class="sm">vertexaisearch.cloud.google.com/home/cid/…</p>
  <ul><li>변호사·지원부서가 쓰는 화면</li><li>채팅, Deep Research, Gemini Notebook</li><li>노코드 에이전트 만들기와 공유 요청</li></ul><p class="role">역할: Gemini Enterprise 사용자</p></div>
 </div>
@@ -456,8 +456,8 @@ a.read{color:#E2B35E;text-decoration:none;font-weight:600;white-space:nowrap}
 </ol></div>
 <div class="ft"><span>세종 GE 관리자 과정</span><span>25</span></div>
 </section>
-<section class="slide chapter" id="s26" data-title="1. 모니터링 대시보드" hidden>
-<div class="hd"><span class=ch>1 · 모니터링</span><h2>1. 모니터링 대시보드</h2></div>
+<section class="slide chapter" id="s26" data-title="1. 이용 현황 모니터링" hidden>
+<div class="hd"><span class=ch>1 · 모니터링</span><h2>1. 이용 현황 모니터링</h2></div>
 <div class="bd"><p class="chs">누가, 얼마나, 무엇을 쓰는지 네 화면에서 확인합니다.</p><p class="cht">15분 · 00:25</p></div>
 <div class="ft"><span>세종 GE 관리자 과정</span><span>26</span></div>
 </section>
@@ -466,7 +466,6 @@ a.read{color:#E2B35E;text-decoration:none;font-weight:600;white-space:nowrap}
 <div class="bd">
 <table class="t">
 <thead><tr><th>화면</th><th>경로</th><th>답하는 질문</th></tr></thead><tbody>
-<tr><td><b>분석 (Analytics)</b></td><td><span class="path">앱 › 분석</span></td><td>전사 활성 사용자, 사용량, 에이전트·Notebook 이용, 만족도</td></tr>
 <tr><td><b>사용자 관리</b></td><td><span class="path">Gemini Enterprise › 사용자 관리</span></td><td>라이선스 보유자, 할당일, 최종 사용일 (사용자 단위)</td></tr>
 <tr><td><b>보안 › 통계</b></td><td><span class="path">앱 › 보안</span></td><td>Model Armor가 탐지·차단한 상호작용</td></tr>
 <tr><td><b>로그 탐색기</b></td><td><span class="path">Logging › 로그 탐색기</span></td><td>사용자별·기능별 상세 기록 (관측 설정 필요)</td></tr>
@@ -474,31 +473,21 @@ a.read{color:#E2B35E;text-decoration:none;font-weight:600;white-space:nowrap}
 </tbody></table></div>
 <div class="ft"><span>세종 GE 관리자 과정</span><span>27</span></div>
 </section>
-<section class="slide " id="s28" data-title="분석(Analytics) 화면" hidden>
-<div class="hd"><span class=ch>1 · 모니터링</span><h2>분석(Analytics) 화면</h2></div>
+<section class="slide " id="s28" data-title="사용자 관리: 누가 쓰고 있나" hidden>
+<div class="hd"><span class=ch>1 · 모니터링</span><h2>사용자 관리: 누가 쓰고 있나</h2></div>
 <div class="bd">
 <div class="cols c32">
- <div><figure class="sf"><img class="shot" src="slides-img/g86.webp" alt="앱 › 분석: Adoption 탭, 기간·간격·제품 필터" loading="lazy"><figcaption>앱 › 분석: Adoption 탭, 기간·간격·제품 필터</figcaption></figure></div>
- <div><table class="t sm"><thead><tr><th>탭</th><th>주요 지표</th></tr></thead><tbody>
- <tr><td>Adoption</td><td>DAU·WAU·MAU, 유지율·이탈, 구매 좌석 대비 사용 좌석</td></tr>
- <tr><td>Usage &amp; Quality</td><td>검색·답변 수, 좋아요/싫어요와 사유, 성공률</td></tr>
- <tr><td>Agent</td><td>에이전트 사용자·세션·생성 수, Notebook 이용</td></tr>
- <tr><td>Value</td><td>절약 시간·가치 (시간당 단가 입력)</td></tr>
- <tr><td>User Level</td><td>사용자별 메시지 수 <span class="pl w">Google 허용 필요</span></td></tr>
- </tbody></table></div>
+ <div><figure class="sf"><img class="shot" src="slides-img/g62.webp" alt="사용자 관리: 구독별 라이선스, 사용자별 할당일·최종 사용" loading="lazy"><figcaption>사용자 관리: 구독별 라이선스, 사용자별 할당일·최종 사용</figcaption></figure></div>
+ <div><ul class="big">
+  <li><b>최종 사용</b> = 마지막 접속일</li>
+  <li>좌석 활용률 = 기간 내 접속자 ÷ 구매 라이선스</li>
+  <li>오래 미접속한 사용자 → 라이선스 재배치</li>
+  <li><b>모든 사용자 내보내기</b> CSV → 2장 부서·팀별 통계</li>
+ </ul></div>
 </div></div>
 <div class="ft"><span>세종 GE 관리자 과정</span><span>28</span></div>
 </section>
-<section class="slide " id="s29" data-title="대시보드를 읽을 때 주의할 점" hidden>
-<div class="hd"><span class=ch>1 · 모니터링</span><h2>대시보드를 읽을 때 주의할 점</h2></div>
-<div class="bd">
-<div class="cols c11">
- <div class="box"><h3>조회 방법</h3><ol><li>탭 선택</li><li>Date Range, Activity Interval(일·주·월) 설정</li><li>Product Type Filter로 검색·답변·어시스턴트 구분</li><li>새로 고침</li></ol></div>
- <div class="box"><h3>해석 주의</h3><ul><li>약 <b>6시간마다</b> 갱신, 당일 오전 사용량은 늦게 보임</li><li>지표는 <b>데이터 스토어 연결 시점부터</b> 쌓임. 연결 해제 전 내보내기</li><li>일부 탭은 미리보기여서 Google에 활성화 요청 필요 (메가존 담당자 통해 요청)</li><li>BigQuery 내보내기: 최근 30일, 프로젝트당 하루 5회</li></ul></div>
-</div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>29</span></div>
-</section>
-<section class="slide " id="s30" data-title="관측 가능성 설정" hidden>
+<section class="slide " id="s29" data-title="관측 가능성 설정" hidden>
 <div class="hd"><span class=ch>1 · 모니터링</span><h2>관측 가능성 설정</h2></div>
 <div class="bd">
 <div class="cols c11">
@@ -506,9 +495,9 @@ a.read{color:#E2B35E;text-decoration:none;font-weight:600;white-space:nowrap}
  <div><div class="box acc"><h3>OpenTelemetry 추적·로그</h3><p>요청 흐름, 지연, 오류, 사용자 활동 로그. 질문 본문은 가려짐. <b>운영용으로 켜기 권장</b>. 수집량만큼 로깅 비용 발생.</p></div>
  <div class="box red"><h3>프롬프트 입력·응답 출력 로깅</h3><p>질문과 답변 <b>원문</b>이 로그에 저장됩니다. 의뢰인 정보가 들어갈 수 있으므로 보안 승인 후 켜고, 비공개 로그 뷰어 권한을 최소화하십시오.</p></div></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>30</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>29</span></div>
 </section>
-<section class="slide " id="s31" data-title="로그 탐색기에서 확인" hidden>
+<section class="slide " id="s30" data-title="로그 탐색기에서 확인" hidden>
 <div class="hd"><span class=ch>1 · 모니터링</span><h2>로그 탐색기에서 확인</h2></div>
 <div class="bd">
 <div class="cols c32">
@@ -518,31 +507,32 @@ discoveryengine.googleapis.com%2F
 gemini_enterprise_user_activity"</pre>
  <ul><li>어떤 사용자가 어떤 기능(검색·어시스턴트·에이전트)을 호출했는지</li><li>데이터 액세스 감사 로그는 <b>기본 꺼짐</b>: IAM › 감사 로그에서 Discovery Engine API 켜기</li></ul></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>31</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>30</span></div>
 </section>
-<section class="slide labslide" id="s32" data-title="실습 A · 대시보드 읽기 (5분)" hidden>
-<div class="hd"><span class=ch>1 · 모니터링</span><h2>실습 A · 대시보드 읽기 (5분)</h2></div>
+<section class="slide labslide" id="s31" data-title="실습 A · 이용 현황 확인 (5분)" hidden>
+<div class="hd"><span class=ch>1 · 모니터링</span><h2>실습 A · 이용 현황 확인 (5분)</h2></div>
 <div class="bd">
 <ol class="lab">
-<li><b>분석 › Adoption</b>: 지난달 MAU, 구매 좌석 대비 사용 좌석 적기 → 좌석 활용률</li>
-<li><b>Usage &amp; Quality</b>: 싫어요 사유 상위 3개</li>
-<li><b>Agent</b>: 이번 달 생성된 에이전트 수, Notebook 활성 사용자</li>
-<li><b>사용자 관리 › 모든 사용자 내보내기</b>: CSV 저장 (실습 B 재료)</li>
+<li><b>사용자 관리</b>: 구독별 총 라이선스와 할당 수 적기</li>
+<li><b>최종 사용</b>: 최근 30일 미접속 사용자 수 확인 → 좌석 활용률</li>
+<li><b>모든 사용자 내보내기</b>: CSV 저장 (실습 B 재료)</li>
+<li><b>관측 가능성</b> 켜짐 확인 → <b>로그 탐색기</b>에서 쿼리 실행</li>
+<li><b>보안 › 통계</b>: 최근 7일 탐지 건수</li>
 </ol>
 <p class="sm2">CSV 열: user_principal · license_config · assignment_time · last_login_time(UTC) · license_assignment_state</p></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>32</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>31</span></div>
 </section>
-<section class="slide chapter" id="s33" data-title="2. 부서·팀별 이용 통계" hidden>
+<section class="slide chapter" id="s32" data-title="2. 부서·팀별 이용 통계" hidden>
 <div class="hd"><span class=ch>2 · 부서·팀별 통계</span><h2>2. 부서·팀별 이용 통계</h2></div>
 <div class="bd"><p class="chs">지원부서별, 변호사 소속 팀별 이용 현황을 산출합니다.</p><p class="cht">10분 · 00:40</p></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>33</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>32</span></div>
 </section>
-<section class="slide " id="s34" data-title="대시보드에는 부서 필터가 없습니다" hidden>
+<section class="slide " id="s33" data-title="대시보드에는 부서 필터가 없습니다" hidden>
 <div class="hd"><span class=ch>2 · 부서·팀별 통계</span><h2>대시보드에는 부서 필터가 없습니다</h2></div>
 <div class="bd">
-<p class="lead">사용자 단위 데이터 + 세종 <b>조직 매핑표</b>(이메일 → 구분 → 부서/팀)를 이메일로 결합해서 만듭니다.</p>
+<p class="lead">콘솔에는 부서·팀별 통계 화면이 없습니다. 사용자 단위 데이터 + 세종 <b>조직 매핑표</b>(이메일 → 구분 → 부서/팀)를 이메일로 결합해서 만듭니다.</p>
 <div class="pipe">
- <div class="pn acc">사용자 단위 데이터<span>CSV · User Level · 로그</span></div>
+ <div class="pn acc">사용자 단위 데이터<span>사용자 CSV · 활동 로그</span></div>
  <div class="pa">+</div>
  <div class="pn gold">조직 매핑표<span>email · 구분 · 부서_팀</span></div>
  <div class="pa">→</div>
@@ -550,14 +540,13 @@ gemini_enterprise_user_activity"</pre>
  <div class="pa">→</div>
  <div class="pn">지원부서별 · 변호사 팀별<span>활성률 · 1인당 사용량</span></div>
 </div>
-<div class="cols c111 mt">
+<div class="cols c11 mt">
  <div class="box"><p class="lv">1단계 · 바로 가능</p><h3>사용자 CSV + 엑셀</h3><p>최종 사용일로 활성 판단. 부서별 라이선스·활성 인원·활성률</p></div>
- <div class="box"><p class="lv">2단계 · 허용 요청</p><h3>User Level 탭</h3><p>사용자별 메시지 수, 자체 에이전트 사용량</p></div>
- <div class="box"><p class="lv">3단계 · 상시 대시보드</p><h3>로그 → BigQuery</h3><p>기능별·일자별 분석, Looker Studio 자동 갱신</p></div>
+ <div class="box"><p class="lv">2단계 · 상시 집계</p><h3>로그 → BigQuery</h3><p>기능별·일자별 요청 수, Data Studio(구 Looker Studio) 자동 갱신</p></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>34</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>33</span></div>
 </section>
-<section class="slide " id="s35" data-title="실습 B · 엑셀로 부서별 활성률 (4분)" hidden>
+<section class="slide " id="s34" data-title="실습 B · 엑셀로 부서별 활성률 (4분)" hidden>
 <div class="hd"><span class=ch>2 · 부서·팀별 통계</span><h2>실습 B · 엑셀로 부서별 활성률 (4분)</h2></div>
 <div class="bd">
 <div class="cols c11">
@@ -573,10 +562,10 @@ H2 9월활성
         D2&gt;=DATE(2026,9,1)), 1, 0)</pre>
  <p class="sm2">last_login_time은 UTC입니다. 5명 미만 팀은 상위 그룹으로 합쳐 보고하십시오.</p></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>35</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>34</span></div>
 </section>
-<section class="slide " id="s36" data-title="3단계 · BigQuery와 대시보드" hidden>
-<div class="hd"><span class=ch>2 · 부서·팀별 통계</span><h2>3단계 · BigQuery와 대시보드</h2></div>
+<section class="slide " id="s35" data-title="2단계 · BigQuery와 대시보드" hidden>
+<div class="hd"><span class=ch>2 · 부서·팀별 통계</span><h2>2단계 · BigQuery와 대시보드</h2></div>
 <div class="bd">
 <div class="cols c11">
  <div><figure class="sf"><img class="shot" src="slides-img/g32.webp" alt="로그 → BigQuery → Looker Studio 대시보드 예시 (MZS 환경)" loading="lazy"><figcaption>로그 → BigQuery → Looker Studio 대시보드 예시 (MZS 환경)</figcaption></figure></div>
@@ -589,14 +578,14 @@ FROM act a JOIN org_map m
 GROUP BY 1, 2</pre>
  <p class="sm2">통계 목적이면 질문 원문 없는 <b>활동 로그만</b> 싱크하십시오. 필드 경로는 실제 테이블 스키마에서 확인합니다.</p></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>36</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>35</span></div>
 </section>
-<section class="slide chapter" id="s37" data-title="3. 크레딧·비용 모니터링" hidden>
+<section class="slide chapter" id="s36" data-title="3. 크레딧·비용 모니터링" hidden>
 <div class="hd"><span class=ch>3 · 크레딧·비용</span><h2>3. 크레딧·비용 모니터링</h2></div>
 <div class="bd"><p class="chs">좌석 요금 밖에서 비용이 생기는 지점과 지켜보는 방법입니다.</p><p class="cht">10분 · 00:50</p></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>37</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>36</span></div>
 </section>
-<section class="slide " id="s38" data-title="할당량은 공동 풀" hidden>
+<section class="slide " id="s37" data-title="할당량은 공동 풀" hidden>
 <div class="hd"><span class=ch>3 · 크레딧·비용</span><h2>할당량은 공동 풀</h2></div>
 <div class="bd">
 <div class="cols c11">
@@ -616,9 +605,9 @@ GROUP BY 1, 2</pre>
  <tr><td>AI 개발 도구/월</td><td class="n">$10</td><td class="n">$15</td></tr>
  </tbody></table><p class="sm2">1인당 수치. 세종 계약 에디션 기준으로 적용하십시오.</p></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>38</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>37</span></div>
 </section>
-<section class="slide " id="s39" data-title="무엇이 추가 과금되나" hidden>
+<section class="slide " id="s38" data-title="무엇이 추가 과금되나" hidden>
 <div class="hd"><span class=ch>3 · 크레딧·비용</span><h2>무엇이 추가 과금되나</h2></div>
 <div class="bd">
 <table class="t">
@@ -630,9 +619,9 @@ GROUP BY 1, 2</pre>
 <tr><td>Model Armor (GE 앱 내)</td><td><span class="pl g">구독에 포함</span></td></tr>
 <tr><td>관측 가능성 로그</td><td><span class="pl w">Cloud Logging 수집량 과금</span></td></tr>
 </tbody></table></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>39</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>38</span></div>
 </section>
-<section class="slide " id="s40" data-title="인덱싱 비용: 쓰지 않는 데이터 스토어" hidden>
+<section class="slide " id="s39" data-title="인덱싱 비용: 쓰지 않는 데이터 스토어" hidden>
 <div class="hd"><span class=ch>3 · 크레딧·비용</span><h2>인덱싱 비용: 쓰지 않는 데이터 스토어</h2></div>
 <div class="bd">
 <div class="cols c11">
@@ -640,9 +629,9 @@ GROUP BY 1, 2</pre>
  <p class="warn">앱에서 <b>연결만 해제</b>한 데이터 스토어(연결된 앱 N/A)도 인덱싱 비용이 계속 발생합니다.</p></div>
  <div class="stack"><figure class="sf"><img class="shot" src="slides-img/g13.webp" alt="1단계: 앱 › 연결된 데이터 스토어 › ⋮ › 연결 해제" loading="lazy"><figcaption>1단계: 앱 › 연결된 데이터 스토어 › ⋮ › 연결 해제</figcaption></figure><figure class="sf"><img class="shot" src="slides-img/g4.webp" alt="2단계: 데이터 스토어 › 삭제 (yes 입력 후 확인)" loading="lazy"><figcaption>2단계: 데이터 스토어 › 삭제 (yes 입력 후 확인)</figcaption></figure></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>40</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>39</span></div>
 </section>
-<section class="slide " id="s41" data-title="어디서 지켜보나" hidden>
+<section class="slide " id="s40" data-title="어디서 지켜보나" hidden>
 <div class="hd"><span class=ch>3 · 크레딧·비용</span><h2>어디서 지켜보나</h2></div>
 <div class="bd">
 <table class="t">
@@ -655,9 +644,9 @@ GROUP BY 1, 2</pre>
 <tr><td>SKU별 비용</td><td><span class="path">결제 › 보고서 › Gemini Enterprise costs by SKU</span></td><td>결제 계정 권한</td></tr>
 </tbody></table>
 <p class="warn">GE 앱은 할당량·초과 알림을 보내지 않습니다. <b>결제 예산 50·80·100% 알림</b>을 IT 메일링 리스트로 받으십시오.</p></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>41</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>40</span></div>
 </section>
-<section class="slide labslide" id="s42" data-title="실습 C · 할당량과 예산 알림 (3분)" hidden>
+<section class="slide labslide" id="s41" data-title="실습 C · 할당량과 예산 알림 (3분)" hidden>
 <div class="hd"><span class=ch>3 · 크레딧·비용</span><h2>실습 C · 할당량과 예산 알림 (3분)</h2></div>
 <div class="bd">
 <ol class="lab">
@@ -666,14 +655,14 @@ GROUP BY 1, 2</pre>
 <li><b>Usage &amp; Spending</b>에서 초과 사용 설정 상태 확인</li>
 <li><b>결제 › 예산 및 알림 › 예산 만들기</b>: 해당 프로젝트, 50/80/100%, 수신자 지정</li>
 </ol></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>42</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>41</span></div>
 </section>
-<section class="slide chapter" id="s43" data-title="4. Antigravity와 Agent 구축" hidden>
+<section class="slide chapter" id="s42" data-title="4. Antigravity와 Agent 구축" hidden>
 <div class="hd"><span class=ch>4 · Antigravity·Agent</span><h2>4. Antigravity와 Agent 구축</h2></div>
 <div class="bd"><p class="chs">에이전트를 Gemini Enterprise에 넣는 세 가지 길과 관리자 역할입니다.</p><p class="cht">12분 · 01:00</p></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>43</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>42</span></div>
 </section>
-<section class="slide " id="s44" data-title="에이전트를 넣는 세 가지 길" hidden>
+<section class="slide " id="s43" data-title="에이전트를 넣는 세 가지 길" hidden>
 <div class="hd"><span class=ch>4 · Antigravity·Agent</span><h2>에이전트를 넣는 세 가지 길</h2></div>
 <div class="bd">
 <div class="cols c23">
@@ -685,9 +674,9 @@ GROUP BY 1, 2</pre>
  </tbody></table></div>
  <div><figure class="sf"><img class="shot" src="slides-img/g127.webp" alt="앱 › 에이전트 › 에이전트 추가: 유형 선택" loading="lazy"><figcaption>앱 › 에이전트 › 에이전트 추가: 유형 선택</figcaption></figure></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>44</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>43</span></div>
 </section>
-<section class="slide " id="s45" data-title="Antigravity: 관리자가 알아야 할 것" hidden>
+<section class="slide " id="s44" data-title="Antigravity: 관리자가 알아야 할 것" hidden>
 <div class="hd"><span class=ch>4 · Antigravity·Agent</span><h2>Antigravity: 관리자가 알아야 할 것</h2></div>
 <div class="bd">
 <div class="cols c11">
@@ -699,9 +688,9 @@ GROUP BY 1, 2</pre>
  </ul></div>
  <div><div class="box"><h3>세종 PC 표준 설정</h3><ul><li>명령 실행: <b>Default</b>(샌드박스) 또는 <b>Request Review</b>(매번 승인). Turbo 금지</li><li>Claude 모델은 관리자가 켜야 하며 토큰 별도 과금</li><li>Antigravity는 Access Transparency·ISO·SOC 범위 밖 → 의뢰인 자료를 작업 폴더에 두지 않기</li><li>GE에 포함된 Gemini Code Assist Standard도 함께 사용 가능</li></ul></div></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>45</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>44</span></div>
 </section>
-<section class="slide " id="s46" data-title="Antigravity 에이전트를 GE에 올리는 5단계" hidden>
+<section class="slide " id="s45" data-title="Antigravity 에이전트를 GE에 올리는 5단계" hidden>
 <div class="hd"><span class=ch>4 · Antigravity·Agent</span><h2>Antigravity 에이전트를 GE에 올리는 5단계</h2></div>
 <div class="bd">
 <div class="pipe five">
@@ -722,9 +711,9 @@ adk deploy agent_engine \
 <div><table class="t sm"><thead><tr><th>GE 앱 위치</th><th>Agent Runtime 리전</th></tr></thead><tbody><tr><td>global</td><td>지원 리전 모두</td></tr><tr><td>us</td><td>us-* 만</td></tr><tr><td>eu</td><td>europe-* 만</td></tr></tbody></table>
 <p class="sm2">등록 시 <b>설명</b>을 구체적으로: Gemini가 이 설명을 보고 언제 에이전트를 부를지 정합니다. 다른 프로젝트의 에이전트면 Discovery Engine 서비스 에이전트 역할 부여.</p></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>46</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>45</span></div>
 </section>
-<section class="slide " id="s47" data-title="중앙 배포 에이전트 공유" hidden>
+<section class="slide " id="s46" data-title="중앙 배포 에이전트 공유" hidden>
 <div class="hd"><span class=ch>4 · Antigravity·Agent</span><h2>중앙 배포 에이전트 공유</h2></div>
 <div class="bd">
 <div class="cols c21">
@@ -735,23 +724,23 @@ adk deploy agent_engine \
  <tr><td>모든 사용자</td><td>조직 전체</td></tr></tbody></table></div>
  <div><figure class="sf"><img class="shot" src="slides-img/g126.webp" alt="역할: Agent User" loading="lazy"><figcaption>역할: Agent User</figcaption></figure></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>47</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>46</span></div>
 </section>
-<section class="slide " id="s48" data-title="배포 에이전트 모니터링" hidden>
+<section class="slide " id="s47" data-title="배포 에이전트 모니터링" hidden>
 <div class="hd"><span class=ch>4 · Antigravity·Agent</span><h2>배포 에이전트 모니터링</h2></div>
 <div class="bd">
 <div class="cols c32">
  <div><figure class="sf"><img class="shot" src="slides-img/g31.webp" alt="Agent Platform › Agents › Deployments › Traces" loading="lazy"><figcaption>Agent Platform › Agents › Deployments › Traces</figcaption></figure></div>
  <div><ul><li>관측 가능성에서 추적·로그를 켜면 배포된 에이전트의 대시보드와 Trace가 채워집니다</li><li>요청별 소요 시간, 호출된 도구, 토큰 사용량 확인</li><li>오류 디버깅의 출발점 (5장)</li><li>ADK·A2A 에이전트에는 앱의 Model Armor가 자동 적용되지 않음 → 코드에서 구성</li></ul></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>48</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>47</span></div>
 </section>
-<section class="slide chapter" id="s49" data-title="5. ChatGPT Agent → Gemini 이전 진단" hidden>
+<section class="slide chapter" id="s48" data-title="5. ChatGPT Agent → Gemini 이전 진단" hidden>
 <div class="hd"><span class=ch>5 · Agent 이전 진단</span><h2>5. ChatGPT Agent → Gemini 이전 진단</h2></div>
 <div class="bd"><p class="chs">구성 요소별로 옮기면 오류는 대부분 정해진 칸에서 납니다.</p><p class="cht">10분 · 01:12</p></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>49</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>48</span></div>
 </section>
-<section class="slide " id="s50" data-title="구성 요소 대응표" hidden>
+<section class="slide " id="s49" data-title="구성 요소 대응표" hidden>
 <div class="hd"><span class=ch>5 · Agent 이전 진단</span><h2>구성 요소 대응표</h2></div>
 <div class="bd">
 <table class="t">
@@ -763,9 +752,9 @@ adk deploy agent_engine \
 <tr><td>Code Interpreter</td><td>어시스턴트 XLSX·CSV 분석 / ADK 코드 실행</td><td>ADK 내장 도구는 에이전트당 1개</td></tr>
 <tr><td>Actions (OpenAPI)</td><td>ADK OpenAPIToolset / MCP 서버 / 커넥터 액션</td><td>스키마 버전, 인증 방식, operationId</td></tr>
 </tbody></table></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>50</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>49</span></div>
 </section>
-<section class="slide " id="s51" data-title="증상별 원인과 해결 ①" hidden>
+<section class="slide " id="s50" data-title="증상별 원인과 해결 ①" hidden>
 <div class="hd"><span class=ch>5 · Agent 이전 진단</span><h2>증상별 원인과 해결 ①</h2></div>
 <div class="bd">
 <table class="t sm">
@@ -777,9 +766,9 @@ adk deploy agent_engine \
 <tr><td>호출 시 권한 거부</td><td>다른 프로젝트 에이전트, 서비스 에이전트 역할 없음</td><td><code>roles/discoveryengine.serviceAgent</code> 부여</td></tr>
 <tr><td>사용자에게 안 보임</td><td>공유 안 함, 초안, <b>승인 대기 중</b></td><td>사용자 권한 확인, 공유 요청 승인</td></tr>
 </tbody></table></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>51</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>50</span></div>
 </section>
-<section class="slide " id="s52" data-title="증상별 원인과 해결 ②" hidden>
+<section class="slide " id="s51" data-title="증상별 원인과 해결 ②" hidden>
 <div class="hd"><span class=ch>5 · Agent 이전 진단</span><h2>증상별 원인과 해결 ②</h2></div>
 <div class="bd">
 <table class="t sm">
@@ -793,23 +782,23 @@ adk deploy agent_engine \
 </tbody></table>
 <pre class="code sm">https://vertexaisearch.cloud.google.com/oauth-redirect
 https://vertexaisearch.cloud.google.com/static/oauth/oauth.html</pre></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>52</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>51</span></div>
 </section>
-<section class="slide " id="s53" data-title="진단 순서와 준비 자료" hidden>
+<section class="slide " id="s52" data-title="진단 순서와 준비 자료" hidden>
 <div class="hd"><span class=ch>5 · Agent 이전 진단</span><h2>진단 순서와 준비 자료</h2></div>
 <div class="bd">
 <div class="cols c11">
  <div class="box acc"><h3>진단 순서</h3><ol><li><b>어느 단계</b>: 만들기 / 배포 / 등록 / 실행 / 노출</li><li><b>오류 원문</b>: 화면 메시지 + 로그 탐색기 + Trace</li><li><b>하나씩 붙이기</b>: 지시문 → 지식 → Action</li><li>표에서 칸을 찾아 조치, 같은 유형 GPT에 일괄 적용</li></ol></div>
  <div class="box"><h3>세종에서 준비할 자료</h3><ul><li>오류 난 GPT 이름·용도 (1~2개)</li><li>Instructions 원문 (의뢰인 정보 가림)</li><li>Knowledge 파일 형식·개수·용량</li><li>Actions 스키마와 인증 방식</li><li>Gemini에서 만든 방법 (노코드/ADK/A2A)</li><li>오류 화면, 발생 시각, 계정</li><li>앱 위치와 에디션</li></ul></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>53</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>52</span></div>
 </section>
-<section class="slide chapter" id="s54" data-title="6. 운영 필수 사항" hidden>
+<section class="slide chapter" id="s53" data-title="6. 운영 필수 사항" hidden>
 <div class="hd"><span class=ch>6 · 운영 필수 사항</span><h2>6. 운영 필수 사항</h2></div>
 <div class="bd"><p class="chs">되돌리기 어려운 결정과 정기 점검 항목입니다.</p><p class="cht">6분 · 01:22</p></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>54</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>53</span></div>
 </section>
-<section class="slide " id="s55" data-title="나중에 바꾸기 어려운 결정" hidden>
+<section class="slide " id="s54" data-title="나중에 바꾸기 어려운 결정" hidden>
 <div class="hd"><span class=ch>6 · 운영 필수 사항</span><h2>나중에 바꾸기 어려운 결정</h2></div>
 <div class="bd">
 <table class="t">
@@ -820,9 +809,9 @@ https://vertexaisearch.cloud.google.com/static/oauth/oauth.html</pre></div>
 <tr><td><b>커스텀 데이터 스토어 ACL</b></td><td>Cloud Storage·BigQuery는 만들 때 접근 제어 정보 포함을 체크</td></tr>
 <tr><td><b>VPC Service Controls</b></td><td>데이터 스토어가 있는 기존 프로젝트는 경계에 넣으려면 재생성</td></tr>
 </tbody></table></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>55</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>54</span></div>
 </section>
-<section class="slide " id="s56" data-title="보안 구성 한눈에" hidden>
+<section class="slide " id="s55" data-title="보안 구성 한눈에" hidden>
 <div class="hd"><span class=ch>6 · 운영 필수 사항</span><h2>보안 구성 한눈에</h2></div>
 <div class="bd">
 <div class="cols c111">
@@ -830,9 +819,9 @@ https://vertexaisearch.cloud.google.com/static/oauth/oauth.html</pre></div>
  <div><figure class="sf"><img class="shot" src="slides-img/g14.webp" alt="앱 단위 접근 제어: HR 앱과 전사 앱 분리" loading="lazy"><figcaption>앱 단위 접근 제어: HR 앱과 전사 앱 분리</figcaption></figure><p class="sm2">기본은 프로젝트 단위 권한이라 URL만 알면 다른 팀 앱에 접속 가능. <b>리소스 접근 제어</b>로 앱별 권한 부여.</p></div>
  <div><figure class="sf"><img class="shot" src="slides-img/g107.webp" alt="VPC-SC: 사무실 IP 대역에서만 접근" loading="lazy"><figcaption>VPC-SC: 사무실 IP 대역에서만 접근</figcaption></figure><p class="sm2">Google 검색 그라운딩을 켜면 VPC-SC가 적용되지 않습니다.</p></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>56</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>55</span></div>
 </section>
-<section class="slide " id="s57" data-title="운영 점검표" hidden>
+<section class="slide " id="s56" data-title="운영 점검표" hidden>
 <div class="hd"><span class=ch>6 · 운영 필수 사항</span><h2>운영 점검표</h2></div>
 <div class="bd">
 <div class="cols c11">
@@ -841,9 +830,9 @@ https://vertexaisearch.cloud.google.com/static/oauth/oauth.html</pre></div>
  <div><p class="lbl">보안·로그</p><ul class="chk"><li>데이터 액세스 감사 로그 켜기 (기본 꺼짐)</li><li>Model Armor: FAIL_CLOSED 유지, 템플릿 로깅 끄기</li><li>프롬프트 로깅을 켰다면 열람 권한자 명단 관리</li><li>역할은 그룹에, 기본 역할(소유자·편집자) 사용 금지</li></ul>
  <p class="lbl">데이터 스토어</p><ul class="chk"><li>증분 동기화는 삭제·권한 변경 미반영 → 전체 동기화 후 적용</li><li>동기화 실패 알림 수신자 지정</li></ul></div>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>57</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>56</span></div>
 </section>
-<section class="slide " id="s58" data-title="자주 받는 문의" hidden>
+<section class="slide " id="s57" data-title="자주 받는 문의" hidden>
 <div class="hd"><span class=ch>6 · 운영 필수 사항</span><h2>자주 받는 문의</h2></div>
 <div class="bd">
 <table class="t">
@@ -855,9 +844,9 @@ https://vertexaisearch.cloud.google.com/static/oauth/oauth.html</pre></div>
 <tr><td>어제 대화가 사라짐</td><td>채팅 기록 보관 기간 (생성일 기준)</td></tr>
 <tr><td>공유한 에이전트가 안 보임</td><td>앱 › 에이전트의 공유 요청 대기</td></tr>
 </tbody></table></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>58</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>57</span></div>
 </section>
-<section class="slide cover" id="s59" data-title="Q&A" hidden>
+<section class="slide cover" id="s58" data-title="Q&A" hidden>
 <div class="hd"><h2>Q&A</h2></div>
 <div class="bd">
 <div class="cv end">
@@ -872,15 +861,15 @@ https://vertexaisearch.cloud.google.com/static/oauth/oauth.html</pre></div>
  </ul>
  <p class="cv-meta">화면 이미지: MZS Gemini Enterprise 관리자 총괄 가이드(2026-10-01), 메가존소프트 테스트 환경 · 메뉴 이름과 수치는 Google 업데이트에 따라 바뀔 수 있습니다.</p>
 </div></div>
-<div class="ft"><span>세종 GE 관리자 과정</span><span>59</span></div>
+<div class="ft"><span>세종 GE 관리자 과정</span><span>58</span></div>
 </section>
 </div></div>
 <div id="prog"></div>
-<nav id="toc" hidden aria-label="슬라이드 목록"><h3>시작</h3><a href="#s1" data-i="0"><span>1</span><span>세종 GE 관리자 과정</span></a><a href="#s2" data-i="1"><span>2</span><span>오늘의 순서</span></a><h3>0 · 관리자 기본 설정</h3><a href="#s3" data-i="2"><span>3</span><span>0. 관리자 기본 설정</span></a><a href="#s4" data-i="3"><span>4</span><span>관리 화면은 두 곳</span></a><a href="#s5" data-i="4"><span>5</span><span>처음 구성하는 순서</span></a><a href="#s6" data-i="5"><span>6</span><span>프로젝트와 API</span></a><a href="#s7" data-i="6"><span>7</span><span>앱 만들기와 위치 선택</span></a><a href="#s8" data-i="7"><span>8</span><span>ID 공급자 설정</span></a><a href="#s9" data-i="8"><span>9</span><span>IAM: 관리자와 사용자 역할</span></a><a href="#s10" data-i="9"><span>10</span><span>구독 관리</span></a><a href="#s11" data-i="10"><span>11</span><span>라이선스 할당: 자동과 수동</span></a><a href="#s12" data-i="11"><span>12</span><span>사용자 목록과 마지막 사용일</span></a><a href="#s13" data-i="12"><span>13</span><span>사용자에게 나눠 줄 주소</span></a><a href="#s14" data-i="13"><span>14</span><span>구성(Configurations) 7개 탭</span></a><a href="#s15" data-i="14"><span>15</span><span>어시스턴트: 세종 공통 지시문</span></a><a href="#s16" data-i="15"><span>16</span><span>어시스턴트: 웹 검색과 Model Armor</span></a><a href="#s17" data-i="16"><span>17</span><span>차단 문구와 채팅 보관 기간</span></a><a href="#s18" data-i="17"><span>18</span><span>기능 관리 ① 에이전트와 도구</span></a><a href="#s19" data-i="18"><span>19</span><span>기능 관리 ② 생성과 입력</span></a><a href="#s20" data-i="19"><span>20</span><span>기능 관리 ③ 공유·안내·보안</span></a><a href="#s21" data-i="20"><span>21</span><span>모델 가용성</span></a><a href="#s22" data-i="21"><span>22</span><span>데이터 스토어 연결</span></a><a href="#s23" data-i="22"><span>23</span><span>에이전트 메뉴</span></a><a href="#s24" data-i="23"><span>24</span><span>에이전트 공유 승인 흐름</span></a><a href="#s25" data-i="24"><span>25</span><span>실습 0 · 세종 앱 설정 점검 (5분)</span></a><h3>1 · 모니터링</h3><a href="#s26" data-i="25"><span>26</span><span>1. 모니터링 대시보드</span></a><a href="#s27" data-i="26"><span>27</span><span>어떤 화면에서 무엇을 보나</span></a><a href="#s28" data-i="27"><span>28</span><span>분석(Analytics) 화면</span></a><a href="#s29" data-i="28"><span>29</span><span>대시보드를 읽을 때 주의할 점</span></a><a href="#s30" data-i="29"><span>30</span><span>관측 가능성 설정</span></a><a href="#s31" data-i="30"><span>31</span><span>로그 탐색기에서 확인</span></a><a href="#s32" data-i="31"><span>32</span><span>실습 A · 대시보드 읽기 (5분)</span></a><h3>2 · 부서·팀별 통계</h3><a href="#s33" data-i="32"><span>33</span><span>2. 부서·팀별 이용 통계</span></a><a href="#s34" data-i="33"><span>34</span><span>대시보드에는 부서 필터가 없습니다</span></a><a href="#s35" data-i="34"><span>35</span><span>실습 B · 엑셀로 부서별 활성률 (4분)</span></a><a href="#s36" data-i="35"><span>36</span><span>3단계 · BigQuery와 대시보드</span></a><h3>3 · 크레딧·비용</h3><a href="#s37" data-i="36"><span>37</span><span>3. 크레딧·비용 모니터링</span></a><a href="#s38" data-i="37"><span>38</span><span>할당량은 공동 풀</span></a><a href="#s39" data-i="38"><span>39</span><span>무엇이 추가 과금되나</span></a><a href="#s40" data-i="39"><span>40</span><span>인덱싱 비용: 쓰지 않는 데이터 스토어</span></a><a href="#s41" data-i="40"><span>41</span><span>어디서 지켜보나</span></a><a href="#s42" data-i="41"><span>42</span><span>실습 C · 할당량과 예산 알림 (3분)</span></a><h3>4 · Antigravity·Agent</h3><a href="#s43" data-i="42"><span>43</span><span>4. Antigravity와 Agent 구축</span></a><a href="#s44" data-i="43"><span>44</span><span>에이전트를 넣는 세 가지 길</span></a><a href="#s45" data-i="44"><span>45</span><span>Antigravity: 관리자가 알아야 할 것</span></a><a href="#s46" data-i="45"><span>46</span><span>Antigravity 에이전트를 GE에 올리는 5단계</span></a><a href="#s47" data-i="46"><span>47</span><span>중앙 배포 에이전트 공유</span></a><a href="#s48" data-i="47"><span>48</span><span>배포 에이전트 모니터링</span></a><h3>5 · Agent 이전 진단</h3><a href="#s49" data-i="48"><span>49</span><span>5. ChatGPT Agent → Gemini 이전 진단</span></a><a href="#s50" data-i="49"><span>50</span><span>구성 요소 대응표</span></a><a href="#s51" data-i="50"><span>51</span><span>증상별 원인과 해결 ①</span></a><a href="#s52" data-i="51"><span>52</span><span>증상별 원인과 해결 ②</span></a><a href="#s53" data-i="52"><span>53</span><span>진단 순서와 준비 자료</span></a><h3>6 · 운영 필수 사항</h3><a href="#s54" data-i="53"><span>54</span><span>6. 운영 필수 사항</span></a><a href="#s55" data-i="54"><span>55</span><span>나중에 바꾸기 어려운 결정</span></a><a href="#s56" data-i="55"><span>56</span><span>보안 구성 한눈에</span></a><a href="#s57" data-i="56"><span>57</span><span>운영 점검표</span></a><a href="#s58" data-i="57"><span>58</span><span>자주 받는 문의</span></a><h3>마무리</h3><a href="#s59" data-i="58"><span>59</span><span>Q&A</span></a></nav>
+<nav id="toc" hidden aria-label="슬라이드 목록"><h3>시작</h3><a href="#s1" data-i="0"><span>1</span><span>세종 GE 관리자 과정</span></a><a href="#s2" data-i="1"><span>2</span><span>오늘의 순서</span></a><h3>0 · 관리자 기본 설정</h3><a href="#s3" data-i="2"><span>3</span><span>0. 관리자 기본 설정</span></a><a href="#s4" data-i="3"><span>4</span><span>관리 화면은 두 곳</span></a><a href="#s5" data-i="4"><span>5</span><span>처음 구성하는 순서</span></a><a href="#s6" data-i="5"><span>6</span><span>프로젝트와 API</span></a><a href="#s7" data-i="6"><span>7</span><span>앱 만들기와 위치 선택</span></a><a href="#s8" data-i="7"><span>8</span><span>ID 공급자 설정</span></a><a href="#s9" data-i="8"><span>9</span><span>IAM: 관리자와 사용자 역할</span></a><a href="#s10" data-i="9"><span>10</span><span>구독 관리</span></a><a href="#s11" data-i="10"><span>11</span><span>라이선스 할당: 자동과 수동</span></a><a href="#s12" data-i="11"><span>12</span><span>사용자 목록과 마지막 사용일</span></a><a href="#s13" data-i="12"><span>13</span><span>사용자에게 나눠 줄 주소</span></a><a href="#s14" data-i="13"><span>14</span><span>구성(Configurations) 7개 탭</span></a><a href="#s15" data-i="14"><span>15</span><span>어시스턴트: 세종 공통 지시문</span></a><a href="#s16" data-i="15"><span>16</span><span>어시스턴트: 웹 검색과 Model Armor</span></a><a href="#s17" data-i="16"><span>17</span><span>차단 문구와 채팅 보관 기간</span></a><a href="#s18" data-i="17"><span>18</span><span>기능 관리 ① 에이전트와 도구</span></a><a href="#s19" data-i="18"><span>19</span><span>기능 관리 ② 생성과 입력</span></a><a href="#s20" data-i="19"><span>20</span><span>기능 관리 ③ 공유·안내·보안</span></a><a href="#s21" data-i="20"><span>21</span><span>모델 가용성</span></a><a href="#s22" data-i="21"><span>22</span><span>데이터 스토어 연결</span></a><a href="#s23" data-i="22"><span>23</span><span>에이전트 메뉴</span></a><a href="#s24" data-i="23"><span>24</span><span>에이전트 공유 승인 흐름</span></a><a href="#s25" data-i="24"><span>25</span><span>실습 0 · 세종 앱 설정 점검 (5분)</span></a><h3>1 · 모니터링</h3><a href="#s26" data-i="25"><span>26</span><span>1. 이용 현황 모니터링</span></a><a href="#s27" data-i="26"><span>27</span><span>어떤 화면에서 무엇을 보나</span></a><a href="#s28" data-i="27"><span>28</span><span>사용자 관리: 누가 쓰고 있나</span></a><a href="#s29" data-i="28"><span>29</span><span>관측 가능성 설정</span></a><a href="#s30" data-i="29"><span>30</span><span>로그 탐색기에서 확인</span></a><a href="#s31" data-i="30"><span>31</span><span>실습 A · 이용 현황 확인 (5분)</span></a><h3>2 · 부서·팀별 통계</h3><a href="#s32" data-i="31"><span>32</span><span>2. 부서·팀별 이용 통계</span></a><a href="#s33" data-i="32"><span>33</span><span>대시보드에는 부서 필터가 없습니다</span></a><a href="#s34" data-i="33"><span>34</span><span>실습 B · 엑셀로 부서별 활성률 (4분)</span></a><a href="#s35" data-i="34"><span>35</span><span>2단계 · BigQuery와 대시보드</span></a><h3>3 · 크레딧·비용</h3><a href="#s36" data-i="35"><span>36</span><span>3. 크레딧·비용 모니터링</span></a><a href="#s37" data-i="36"><span>37</span><span>할당량은 공동 풀</span></a><a href="#s38" data-i="37"><span>38</span><span>무엇이 추가 과금되나</span></a><a href="#s39" data-i="38"><span>39</span><span>인덱싱 비용: 쓰지 않는 데이터 스토어</span></a><a href="#s40" data-i="39"><span>40</span><span>어디서 지켜보나</span></a><a href="#s41" data-i="40"><span>41</span><span>실습 C · 할당량과 예산 알림 (3분)</span></a><h3>4 · Antigravity·Agent</h3><a href="#s42" data-i="41"><span>42</span><span>4. Antigravity와 Agent 구축</span></a><a href="#s43" data-i="42"><span>43</span><span>에이전트를 넣는 세 가지 길</span></a><a href="#s44" data-i="43"><span>44</span><span>Antigravity: 관리자가 알아야 할 것</span></a><a href="#s45" data-i="44"><span>45</span><span>Antigravity 에이전트를 GE에 올리는 5단계</span></a><a href="#s46" data-i="45"><span>46</span><span>중앙 배포 에이전트 공유</span></a><a href="#s47" data-i="46"><span>47</span><span>배포 에이전트 모니터링</span></a><h3>5 · Agent 이전 진단</h3><a href="#s48" data-i="47"><span>48</span><span>5. ChatGPT Agent → Gemini 이전 진단</span></a><a href="#s49" data-i="48"><span>49</span><span>구성 요소 대응표</span></a><a href="#s50" data-i="49"><span>50</span><span>증상별 원인과 해결 ①</span></a><a href="#s51" data-i="50"><span>51</span><span>증상별 원인과 해결 ②</span></a><a href="#s52" data-i="51"><span>52</span><span>진단 순서와 준비 자료</span></a><h3>6 · 운영 필수 사항</h3><a href="#s53" data-i="52"><span>53</span><span>6. 운영 필수 사항</span></a><a href="#s54" data-i="53"><span>54</span><span>나중에 바꾸기 어려운 결정</span></a><a href="#s55" data-i="54"><span>55</span><span>보안 구성 한눈에</span></a><a href="#s56" data-i="55"><span>56</span><span>운영 점검표</span></a><a href="#s57" data-i="56"><span>57</span><span>자주 받는 문의</span></a><h3>마무리</h3><a href="#s58" data-i="57"><span>58</span><span>Q&A</span></a></nav>
 <div id="bar">
  <button id="tocbtn" type="button" aria-label="슬라이드 목록 (O)">목록</button>
  <button id="prev" type="button" aria-label="이전 슬라이드">‹ 이전</button>
- <span id="count">1 / 59</span>
+ <span id="count">1 / 58</span>
  <button id="next" type="button" aria-label="다음 슬라이드">다음 ›</button>
  <span id="ttl"></span>
  <a class="read opt" href="index.html">읽기용 교재</a>
