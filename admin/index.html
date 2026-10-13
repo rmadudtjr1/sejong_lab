@@ -382,18 +382,33 @@ footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);font-si
 <article class="topic wide" id="m2-2">
  <div class="thead"><span class="tn">2-2</span><h3>방법 1 · 사용자 CSV + 엑셀 (바로 가능)</h3></div>
  <div class="tbody"><div class="tx">
-<ol><li>매핑 시트: <code>email · 구분 · 부서_팀</code></li><li>사용자 CSV 시트에 아래 수식 열 추가</li><li>피벗: 행 = 구분, 부서_팀 / 값 = 개수, 활성 합계 → 활성률</li><li><b>미매핑</b> 계정은 퇴사자·외부 계정 → 라이선스 회수 검토</li></ol>
-<pre class="code">F2 부서_팀  =XLOOKUP(LOWER(A2), LOWER(매핑!A:A), 매핑!C:C, "미매핑")
-G2 구분     =XLOOKUP(LOWER(A2), LOWER(매핑!A:A), 매핑!B:B, "미매핑")
-H2 9월활성  =IF(AND(E2="ASSIGNED", D2&gt;=DATE(2026,9,1)), 1, 0)</pre>
-<p class="small">last_login_time은 UTC입니다. 월 경계를 엄밀히 맞추려면 9시간을 더해 비교하십시오.</p></div></div>
+<p><b>① 파일 준비</b></p>
+<ol><li><span class="path">사용자 관리 › 모든 사용자 내보내기</span>로 <code>users.csv</code>를 받습니다.</li>
+<li>엑셀로 열고 <b>다른 이름으로 저장 › Excel 통합 문서(.xlsx)</b>로 저장합니다. CSV 그대로 두면 새 시트가 저장되지 않습니다.</li>
+<li>새 시트를 만들어 이름을 <b>매핑</b>으로 바꾸고 직원 명단을 붙여 넣습니다. 열 순서는 아래와 같이 맞춥니다.</li></ol>
+<div class="duo">
+ <div class="pane"><b>users 시트 (콘솔에서 받은 그대로)</b><span>A user_principal (이메일) · B license_config · C assignment_time (할당일) · D last_login_time (최종 사용) · E license_assignment_state (ASSIGNED / NO_LICENSE)</span></div>
+ <div class="pane"><b>매핑 시트 (세종이 작성)</b><span>A email · B 구분 (변호사 / 지원부서) · C 부서_팀 · D 이름 (참고용, 맨 뒤)</span></div>
+</div>
+<p class="small">날짜는 <code>2026-10-12T23:12:24Z</code> 같은 <b>UTC 텍스트</b>라서 엑셀이 날짜로 인식하지 않습니다. 아래 H열처럼 한국 시간 날짜로 바꾼 뒤 비교합니다. 라이선스가 없어도(NO_LICENSE) 접속 기록은 남으므로 활성 판단에는 ASSIGNED만 셉니다.</p>
+<p><b>② users 시트에 수식 열 추가</b> (2행에 넣고 아래로 채우기)</p>
+<pre class="code">F2 부서_팀       =XLOOKUP(LOWER(A2), LOWER(매핑!A:A), 매핑!C:C, "미매핑")
+G2 구분          =XLOOKUP(LOWER(A2), LOWER(매핑!A:A), 매핑!B:B, "미매핑")
+H2 최종사용(KST) =IF(D2="", "", DATE(LEFT(D2,4), MID(D2,6,2), MID(D2,9,2)) + TIMEVALUE(MID(D2,12,8)) + 9/24)
+I2 9월활성       =IF(AND(E2="ASSIGNED", H2&lt;&gt;"", H2&gt;=DATE(2026,9,1), H2&lt;DATE(2026,10,1)), 1, 0)</pre>
+<p class="small">H열 서식은 <b>yyyy-mm-dd hh:mm</b>으로 지정합니다. 다른 달을 보려면 I열의 두 날짜만 바꿉니다.</p>
+<p><b>③ 집계</b></p>
+<ol><li>삽입 › 피벗 테이블: <b>필터</b> = license_assignment_state가 ASSIGNED / 행 = 구분, 부서_팀 / 값 = user_principal 개수(라이선스 수), 9월활성 합계(활성 인원)</li>
+<li>활성률 = 활성 인원 ÷ 라이선스 수</li>
+<li><b>미매핑</b>으로 나온 계정은 퇴사자·외부 계정·이메일 변경자입니다. 라이선스 회수 대상인지 확인합니다.</li></ol>
+<p class="tip">다음 달부터는 같은 엑셀 파일을 열어 users 시트 내용만 새로 받은 CSV로 바꿔 붙입니다. 매핑 시트는 입사·퇴사·팀 이동만 고칩니다.</p></div></div>
 </article>
 <article class="topic wide" id="m2-3">
  <div class="thead"><span class="tn">2-3</span><h3>방법 2 · 로그 → BigQuery (매달 자동 집계)</h3></div>
  <div class="tbody"><div class="tx">
 <ol><li>1장의 관측 설정(추적·로그)을 켭니다.</li>
 <li><span class="path">Logging › 로그 라우터 › 싱크 만들기</span> → 대상 BigQuery, 아래 필터로 사용자 활동 로그만 보냅니다.</li>
-<li>조직 매핑표를 BigQuery 테이블로 올립니다.</li>
+<li>조직 매핑표(매핑 시트와 같은 열)를 <b>별도 CSV</b>로 저장해 BigQuery 테이블로 올립니다. 이 방법에서는 콘솔 CSV를 쓰지 않습니다.</li>
 <li>이메일로 결합해 월별·팀별 활성 사용자와 요청 수를 집계합니다. 매달 보는 화면은 <b>2-4 대시보드</b>로 만듭니다.</li></ol>
 <pre class="code">logName="projects/PROJECT_ID/logs/discoveryengine.googleapis.com%2Fgemini_enterprise_user_activity"</pre>
 <pre class="code">-- 필드 경로는 실제 테이블 스키마에서 확인
