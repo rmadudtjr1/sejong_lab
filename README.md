@@ -7,8 +7,8 @@
 | [`index.html`](index.html) | Gemini Enterprise 활용 교재 (슬라이드 111장, 검색 · 발표 모드) |
 | [`SEJONG_index.html`](SEJONG_index.html) | 실습 가이드북 (90분 시간표, 프롬프트 복사, 직무별 템플릿) |
 | [`data_pack.zip`](data_pack.zip) | 실습용 가상 데이터팩 7종 |
-| [`admin/`](admin/) | **관리자 교육 발표 슬라이드** (90분, 실제 콘솔 화면, ←/→ 넘기기, O 목록) |
-| [`admin/guide.html`](admin/guide.html) | 관리자 교육 읽기용 교재: GE 관리자 기본 설정, 모니터링, 부서·팀별 통계, 크레딧, Antigravity·Agent, ChatGPT Agent 이전 진단, 운영 체크리스트 |
+| [`admin/`](admin/) | **관리자 교육** (90분): GE 관리자 기본 설정, 모니터링, 부서·팀별 통계, 크레딧, Antigravity·Agent, ChatGPT Agent 이전 진단, 운영 체크리스트 (실제 콘솔 화면 포함) |
+| [`admin/slides.html`](admin/slides.html) | (선택) 관리자 교육 발표용 슬라이드 |
 | [`admin/deploy.html`](admin/deploy.html) | 웹 게시 방법 (GitHub Pages 설정, 커밋·푸시, 문제 해결) |
 
 - 실습 데이터는 모두 교육용 **가상 데이터**이며 실제 의뢰인·사건·법인 규정과 무관합니다.
