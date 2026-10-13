@@ -163,7 +163,7 @@ footer{margin-top:72px;padding-top:18px;border-top:1px solid var(--line);font-si
   <div class="eyebrow">법무법인(유) 세종 · Gemini Enterprise 관리자 교육</div>
   <h1>세종 GE 관리자 과정</h1>
   <p class="lead">Gemini Enterprise 관리자 기본 설정(구독·라이선스·ID·앱 설정·데이터 연결·에이전트 승인)을 먼저 익힌 뒤, 모니터링 대시보드로 이용 현황을 읽고, 지원부서·변호사 팀별 통계를 뽑고, 추가 비용이 생기는 지점을 지키는 방법을 다룹니다. 이어서 Antigravity로 에이전트를 만들어 Gemini Enterprise에 올리는 흐름과, ChatGPT Enterprise 파일럿에서 만든 Agent를 옮길 때 생기는 오류를 진단합니다.</p>
-  <div class="meta"><span><b>시간</b> 90분 (설명 + 콘솔 실습)</span><span><b>대상</b> IT·운영 관리자</span><span><b>기준일</b> 2026-10-13, Google Cloud 공식 문서</span></div>
+  <div class="meta"><span><b>발표용</b> <a href="slides.html">슬라이드 보기</a></span><span><b>시간</b> 90분 (설명 + 콘솔 실습)</span><span><b>대상</b> IT·운영 관리자</span><span><b>기준일</b> 2026-10-13, Google Cloud 공식 문서</span></div>
   <details class="mtoc"><summary>목차</summary>
     <ol>
       <li><a href="#plan">교육 시간표</a></li><li><a href="#m0">0. 관리자 기본 설정</a></li><li><a href="#m1">1. 모니터링 대시보드</a></li><li><a href="#m2">2. 부서·팀별 이용 통계</a></li><li><a href="#m3">3. 크레딧·비용 모니터링</a></li><li><a href="#m4">4. Antigravity·Agent 구축</a></li><li><a href="#m5">5. ChatGPT Agent 이전 진단</a></li><li><a href="#m6">6. 운영 필수 체크리스트</a></li><li><a href="#ref">부록 · 권한 · 출처</a></li>
@@ -273,14 +273,16 @@ footer{margin-top:72px;padding-top:18px;border-top:1px solid var(--line);font-si
   </ol>
   <p class="src">출처: <a href="https://docs.cloud.google.com/gemini/enterprise/docs/create-app" target="_blank" rel="noopener">Create an app</a></p>
 
-  <h3>앱 설정 화면 (Configurations)</h3>
+  <h3>앱 설정 화면 (Configurations) 7개 탭</h3>
   <p>경로: <span class="path">Gemini Enterprise › Apps › 앱 선택 › Configurations</span>. 변경 후 <b>Save and publish</b>를 눌러야 사용자에게 반영됩니다.</p>
   <div class="tbl"><table>
     <thead><tr><th>탭</th><th>무엇을 정하나</th></tr></thead>
     <tbody>
       <tr><td><b>Search UI</b></td><td>로고 등 화면 모양과 브랜딩, 피드백 사용 여부</td></tr>
-      <tr><td><b>Autocomplete</b></td><td>검색어 자동 완성</td></tr>
+      <tr><td><b>Autocomplete</b> (자동 완성)</td><td>검색어 자동 완성</td></tr>
+      <tr><td><b>Control</b> (제어)</td><td>검색 결과 상승·하강(Boost/Bury), 동의어, 필터, 특정 링크 프로모션</td></tr>
       <tr><td><b>Assistant</b> <span class="pill p-info">Plus</span></td><td>추가 시스템 지시문, 웹 그라운딩(Google 검색 / 데이터 레지던시를 지키는 Enterprise 웹 검색), 기본 웹 검색 상태, 위치 정보, Model Armor, 금지 문구, <b>대화 기록 보관 기간</b>(기본 60일)</td></tr>
+      <tr><td><b>Knowledge Graph</b> (지식 그래프)</td><td>Google 공개 지식 그래프(global 앱만), 연결 데이터로 만드는 비공개 지식 그래프</td></tr>
       <tr><td><b>Feature Management</b></td><td>사용자 기능 스위치 전체 (아래 표)</td></tr>
       <tr><td><b>Observability</b></td><td>추적·로그, 프롬프트·응답 로깅 (1장)</td></tr>
     </tbody>

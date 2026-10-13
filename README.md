@@ -8,6 +8,7 @@
 | [`SEJONG_index.html`](SEJONG_index.html) | 실습 가이드북 (90분 시간표, 프롬프트 복사, 직무별 템플릿) |
 | [`data_pack.zip`](data_pack.zip) | 실습용 가상 데이터팩 7종 |
 | [`admin/`](admin/) | **관리자 교육** (90분): GE 관리자 기본 설정, 모니터링 대시보드, 부서·팀별 통계, 크레딧, Antigravity·Agent 구축, ChatGPT Agent 이전 진단, 운영 체크리스트 |
+| [`admin/slides.html`](admin/slides.html) | 관리자 교육 **발표용 슬라이드** 59장 (실제 콘솔 화면, ←/→ 넘기기, O 목록) |
 | [`admin/deploy.html`](admin/deploy.html) | 웹 게시 방법 (GitHub Pages 설정, 커밋·푸시, 문제 해결) |
 
 - 실습 데이터는 모두 교육용 **가상 데이터**이며 실제 의뢰인·사건·법인 규정과 무관합니다.
